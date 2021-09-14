@@ -1,104 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:site_name" content="온더룩 - No.1 패션 검색 앱" />
+    <meta
+      property="og:title"
+      content="온더룩, 옷 잘 입기 필수 앱 | 스타일 트렌드는 온더룩"
+    />
+    <meta property="og:url" content="http://onthelook.co.kr" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://images.onthelook.co.kr/p/kk9xdk8WmipXheknN1Pfwy.jpeg"
+    />
+    <meta
+      property="og:description"
+      content="패션 크리에이터들의 옷차림을 통해 트렌드를 확인하고 쇼핑할 수 있는 패션 스타일 모음 서비스, 온더룩 바로가기"
+    />
+    <meta property="al:ios:url" content="applinks:onthelook.co.kr" />
+    <meta property="al:ios:app_store_id" content="1476231289" />
+    <meta property="al:ios:app_name" content="온더룩 - No.1 패션 검색 앱" />
+    <meta property="al:android:url" content="applinks:onthelook.co.kr" />
+    <meta property="al:android:app_name" content="온더룩 - No.1 패션 검색 앱" />
+    <meta property="al:android:package" content="co.kr.onthelook" />
+    <meta property="al:web:url" content="https://onthelook.co.kr" />
+    <title>온더룩, 옷 잘 입기 필수 앱 | 스타일 트렌드는 온더룩</title>
+    <meta
+      name="description"
+      content="크리에이터를 위한 온더룩 전용 페이지"
+      data-react-helmet="true"
+    />
+    <link rel="manifest" href="https://onthelook.co.kr/manifest.json" />
+    <link rel="shortcut icon" href="https://onthelook.co.kr/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="https://onthelook.co.kr/images/icons/icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="96x96"
+      href="https://onthelook.co.kr/images/icons/icon-96x96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="128x128"
+      href="https://onthelook.co.kr/images/icons/icon-128x128.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="https://onthelook.co.kr/images/icons/icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="https://onthelook.co.kr/images/icons/icon-192x192.png"
+    />
+    <link rel="canonical" href="https://onthelook.co.kr/" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      #container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      #box {
+        position: relative;
+        width: auto;
+        height: 90%;
+        max-height: 812px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #box img.fake {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        pointer-events: none;
+      }
+      #box img.real {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        pointer-events: none;
+      }
+      #box iframe {
+        position: absolute;
+        width: 89.9%;
+        height: 88.8%;
+        top: 5.4%;
+        left: 5%;
+        z-index: 1;
+        border: 0;
+      }
+      #indicator {
+        border-radius: 6px;
+        position: absolute;
+        bottom: 4%;
+        width: 50px;
+        z-index: 3;
+        width: 30%;
+        height: 5px;
+        background-color: #000;
+      }
+      #logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
+      }
+      #logo img {
+        width: 124px;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="theme-color" content="#000000" />
-  <meta property="og:site_name" content="온더룩 - No.1 패션 검색 앱" />
-  <meta property="og:title" content="온더룩, 옷 잘 입기 필수 앱 | 스타일 트렌드는 온더룩" />
-  <meta property="og:url" content="http://onthelook.co.kr" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.onthelook.co.kr/p/kk9xdk8WmipXheknN1Pfwy.jpeg" />
-  <meta property="og:description" content="패션 크리에이터들의 옷차림을 통해 트렌드를 확인하고 쇼핑할 수 있는 패션 스타일 모음 서비스, 온더룩 바로가기" />
-  <meta property="al:ios:url" content="applinks:onthelook.co.kr" />
-  <meta property="al:ios:app_store_id" content="1476231289" />
-  <meta property="al:ios:app_name" content="온더룩 - No.1 패션 검색 앱" />
-  <meta property="al:android:url" content="applinks:onthelook.co.kr" />
-  <meta property="al:android:app_name" content="온더룩 - No.1 패션 검색 앱" />
-  <meta property="al:android:package" content="co.kr.onthelook" />
-  <meta property="al:web:url" content="https://onthelook.co.kr" />
-  <title>온더룩, 옷 잘 입기 필수 앱 | 스타일 트렌드는 온더룩</title>
-  <meta name="description" content="크리에이터를 위한 온더룩 전용 페이지" data-react-helmet="true" />
-  <link rel="manifest" href="https://onthelook.co.kr/manifest.json" />
-  <link rel="shortcut icon" href="https://onthelook.co.kr/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="72x72" href="https://onthelook.co.kr/images/icons/icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="96x96" href="https://onthelook.co.kr/images/icons/icon-96x96.png" />
-  <link rel="apple-touch-icon" sizes="128x128" href="https://onthelook.co.kr/images/icons/icon-128x128.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="https://onthelook.co.kr/images/icons/icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="192x192" href="https://onthelook.co.kr/images/icons/icon-192x192.png" />
-  <link rel="canonical" href="https://onthelook.co.kr/">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    #container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    #box {
-      position: relative;
-      width: auto;
-      height: 90%;
-      max-height: 812px;
-      display: flex;
-      align-items: center;
-      justify-content: center; 
-    }
-    #box img.fake {
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      pointer-events: none;
-    }
-    #box img.real {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 2;
-      pointer-events: none;
-    }
-    #box iframe {
-      position: absolute;
-      width: 89.9%;
-      height: 88.8%;
-      top: 5.4%;
-      left: 5%;
-      z-index: 1;
-      border: 0;
-    }
-    #indicator {
-      border-radius: 6px;
-      position: absolute;
-      bottom: 4%;
-      width: 50px;
-      z-index: 3;
-      width: 30%;
-      height: 5px;
-      background-color: #000;
-    }
-  </style>
-</head>
-
-<body>
-  <div id="container">
-    <div id="box">
-      <img class="real" src="https://images.onthelook.co.kr/pr/pFEYBvDA2JDTZ4JpJRv44R.png"/>
-      <img class="fake" src="https://images.onthelook.co.kr/pr/pFEYBvDA2JDTZ4JpJRv44R.png"/>
-      <iframe src="https://onthelook.co.kr/?app=Y"></iframe>
-      <div id="indicator"></div>
+  <body>
+    <div id="container">
+      <div id="logo">
+        <img src="https://images.onthelook.co.kr/ic_onthelook.png" />
+      </div>
+      <div id="box">
+        <img
+          class="real"
+          src="https://images.onthelook.co.kr/pr/pFEYBvDA2JDTZ4JpJRv44R.png"
+        />
+        <img
+          class="fake"
+          src="https://images.onthelook.co.kr/pr/pFEYBvDA2JDTZ4JpJRv44R.png"
+        />
+        <iframe src="https://onthelook.co.kr/?app=Y"></iframe>
+        <div id="indicator"></div>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

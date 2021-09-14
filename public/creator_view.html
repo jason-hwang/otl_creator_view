@@ -88,16 +88,29 @@
       height: 5px;
       background-color: #000;
     }
+    #logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #logo img {
+      width: 150px;
+    }
   </style>
 </head>
 
 <body>
   <div id="container">
-    <div id="box">
-      <img class="real" src="https://images.onthelook.co.kr/pr/pFEYBvDA2JDTZ4JpJRv44R.png"/>
-      <img class="fake" src="https://images.onthelook.co.kr/pr/pFEYBvDA2JDTZ4JpJRv44R.png"/>
-      <iframe src="https://onthelook.co.kr/?app=Y"></iframe>
-      <div id="indicator"></div>
+    <div>
+      <div id="logo">
+        <img src="https://images.onthelook.co.kr/ic_onthelook.png" />
+      </div>
+      <div id="box">
+        <img class="real" src="https://images.onthelook.co.kr/pr/pFEYBvDA2JDTZ4JpJRv44R.png" />
+        <img class="fake" src="https://images.onthelook.co.kr/pr/pFEYBvDA2JDTZ4JpJRv44R.png" />
+        <iframe src="https://onthelook.co.kr/?app=Y"></iframe>
+        <div id="indicator"></div>
+      </div>
     </div>
   </div>
 </body>
